@@ -901,6 +901,13 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.2DGeometry}" name="call.subproject"/>
+            <param location="${project.2DGeometry}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.ApplicationAPI}" name="call.subproject"/>
             <param location="${project.ApplicationAPI}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
@@ -924,6 +931,13 @@ is divided into following sections:
             <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.LunarLander}" name="call.subproject"/>
             <param location="${project.LunarLander}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.MassSpringSystem}" name="call.subproject"/>
+            <param location="${project.MassSpringSystem}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
             <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
         </antcall>
@@ -1411,6 +1425,13 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.2DGeometry}" name="call.subproject"/>
+            <param location="${project.2DGeometry}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.ApplicationAPI}" name="call.subproject"/>
             <param location="${project.ApplicationAPI}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
@@ -1434,6 +1455,13 @@ is divided into following sections:
             <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.LunarLander}" name="call.subproject"/>
             <param location="${project.LunarLander}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.MassSpringSystem}" name="call.subproject"/>
+            <param location="${project.MassSpringSystem}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
             <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
         </antcall>
